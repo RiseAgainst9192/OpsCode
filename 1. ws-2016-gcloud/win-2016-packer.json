@@ -1,0 +1,32 @@
+{
+  "variables": {},
+  "provisioners": [
+    {
+      "type":  "ansible",
+      "user":"packer",
+      "playbook_file": "./win-playbook.yml",
+      "extra_arguments": [
+        "--connection", "packer",
+        "--extra-vars", "ansible_shell_type=powershell ansible_shell_executable=None",
+        "-vvv"
+      ]
+    }
+  ],
+  "builders": [{
+    "type": "googlecompute",
+    "account_file": "account.json",
+    "project_id": "it-helpdesk-182606",
+    "source_image": "windows-server-2016-dc-v20171010",
+    "disk_size": "50",
+    "machine_type": "n1-standard-1",
+    "zone": "us-central1-a",
+    "communicator": "winrm",
+    "winrm_username": "packer",
+    "winrm_timeout": "12h",
+    "winrm_insecure": true,
+    "winrm_use_ssl": true,
+    "metadata": {
+      "sysprep-specialize-script-cmd": "winrm set winrm/config/service/auth @{Basic=\"true\"}"
+    }
+  }]
+}

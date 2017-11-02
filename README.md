@@ -1,6 +1,6 @@
 ## Lessons (by folder)
 
-#### [1. ws-2016-gcloud](/tree/master/1.%20ws-2016-gcloud)
+#### [1. ws-2016-gcloud](/1.%20ws-2016-gcloud)
 
 Tags:  [Packer](https://www.packer.io), [Terraform](https://www.terraform.io), [Ansible](https://www.ansible.com), Windows Servers, Google Cloud Compute.
 
@@ -15,8 +15,15 @@ Learned:
    2. Deploying to the cloud
    3. Defining all the needed parameters (e.g. firewall, vm machine, region/zone).
 
-#### [2. ubuntu-windows-desktop]() (In progress)
+#### [2. ubuntu-windows-desktop](/2.%ubuntu-windows-desktop) (In progress)
 
 Tags: Ansible, Xubuntu 17.10, Windows Server 2016.
 
-Learned: How to use [Ansible](https://www.ansible.com) to install MSI, scripts, and OS settings for a normal day-to-day SysAdmin laptop.
+Learned: How to use [Ansible](https://www.ansible.com) to install MSI installers and adjust OS settings for a normal day-to-day SysAdmin laptop.
+
+## TODO:
+
+1. [2. ubuntu-windows-desktop](/2.%ubuntu-windows-desktop)
+2. "Pretifify" github project.
+3. "4. Windows Server 2012 R2 MSCA book notes"
+4. "5. Powershell Scripts".
